@@ -8,8 +8,15 @@ export default function Home() {
         <div className="container-custom">
           <div className="flex items-center justify-between h-16">
             {/* Logo */}
-            <a href="#" className="font-pawnly text-2xl text-[#C4785C]">
-              Pawnly
+            <a href="#" className="block">
+              <Image
+                src="/logo-pawnly.png"
+                alt="Pawnly"
+                width={222}
+                height={80}
+                className="h-8 w-auto md:h-9"
+                priority
+              />
             </a>
 
             {/* Navigation */}
@@ -167,337 +174,370 @@ export default function Home() {
       </section>
 
       {/* Pawners Section */}
-      <section id="pawners" className="py-20 bg-[#FDF8F6]">
+      <section id="pawners" className="py-20 bg-[#F4F1F0]">
         <div className="container-custom">
-          <h2 className="font-pawnly text-3xl md:text-4xl text-center text-[#C4785C] mb-16">
-            Pawners
-          </h2>
+          <div className="bg-[#F6F2F1] rounded-[28px] px-6 md:px-10 py-10 md:py-12">
+            <h2 className="font-pawnly text-3xl md:text-4xl text-center text-[#C4785C] mb-10">
+              Pawners
+            </h2>
 
-          {/* What can Pawnly do for pawner */}
-          <div className="grid lg:grid-cols-2 gap-8 items-start mb-16">
-            {/* Left - Image */}
-            <div>
-              <Image
-                src="/img5.png"
-                alt="What can Pawnly do for pawner"
-                width={600}
-                height={450}
-                className="w-full h-auto"
-              />
-            </div>
+            {/* What can Pawnly do for pawner */}
+            <div className="grid lg:grid-cols-2 gap-8 items-start mb-10">
+              {/* Left - Image */}
+              <div className="flex justify-center">
+                <Image
+                  src="/img5.png"
+                  alt="What can Pawnly do for pawner"
+                  width={620}
+                  height={460}
+                  className="w-full max-w-xl h-auto"
+                />
+              </div>
 
-            {/* Right - Features */}
-            <div className="space-y-3">
-              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">Digital Item Listing</span>
+              {/* Right - Features */}
+              <div className="space-y-3">
+                <div className="bg-[#FBECE6] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#EAC4B5]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#C4785C] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#C4785C]">Digital Item Listing</span>
+                  </div>
+                  <span className="text-[#C4785C] text-xs bg-[#F7D8CB] px-3 py-1 rounded-full">ลงรายการทรัพย์สินดิจิทัล</span>
                 </div>
-                <span className="text-gray-400 text-xs">เพิ่มรายการสินค้า</span>
-              </div>
 
-              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">AI Appraisal Tool</span>
+                <div className="bg-[#FBECE6] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#EAC4B5]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#C4785C] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#C4785C]">AI Appraisal Tool</span>
+                  </div>
+                  <span className="text-[#C4785C] text-xs bg-[#F7D8CB] px-3 py-1 rounded-full">เครื่องมือประเมินด้วย AI</span>
                 </div>
-                <span className="text-gray-400 text-xs">ประเมินมูลค่าด้วย AI</span>
-              </div>
 
-              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">Loan Status Tracking</span>
+                <div className="bg-[#FBECE6] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#EAC4B5]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#C4785C] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#C4785C]">Loan Status Tracking</span>
+                  </div>
+                  <span className="text-[#C4785C] text-xs bg-[#F7D8CB] px-3 py-1 rounded-full">ติดตามสถานะสินเชื่อ</span>
                 </div>
-                <span className="text-gray-400 text-xs">ติดตามสถานะสัญญา</span>
-              </div>
 
-              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">Secure Messaging</span>
+                <div className="bg-[#FBECE6] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#EAC4B5]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#C4785C] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#C4785C]">Secure Messaging</span>
+                  </div>
+                  <span className="text-[#C4785C] text-xs bg-[#F7D8CB] px-3 py-1 rounded-full">แชทกับทีมงาน</span>
                 </div>
-                <span className="text-gray-400 text-xs">แชทกับทีมงาน</span>
-              </div>
 
-              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">Digital Loan Agreements</span>
+                <div className="bg-[#FBECE6] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#EAC4B5]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#C4785C] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#C4785C]">Digital Loan Agreements</span>
+                  </div>
+                  <span className="text-[#C4785C] text-xs bg-[#F7D8CB] px-3 py-1 rounded-full">ทำสัญญาดิจิทัล</span>
                 </div>
-                <span className="text-gray-400 text-xs">สัญญาดิจิทัล</span>
               </div>
             </div>
-          </div>
 
-          {/* Benefits */}
-          <div className="text-center mb-8">
-            <h3 className="font-display text-2xl md:text-3xl text-gray-800 mb-2">Benefits</h3>
-            <p className="text-[#C4785C] text-sm">ประโยชน์สำหรับผู้ขอสินเชื่อ</p>
-          </div>
-
-          <div className="text-center mb-8">
-            <h4 className="font-pawnly text-xl text-[#C4785C] mb-2">Pawners</h4>
-            <p className="text-gray-500 text-sm">Benefits for Pawn Holders/Borrowers</p>
-          </div>
-
-          {/* Benefits Grid - 5 columns */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
-              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-                </svg>
+            {/* Benefits */}
+            <div className="text-center mb-6">
+              <div className="bg-[#F0CFC2] rounded-full py-4 px-6 max-w-3xl mx-auto">
+                <h3 className="font-display text-2xl md:text-3xl text-[#8B5A42]">Benefits</h3>
+                <p className="text-[#C4785C] text-sm">ทำไมต้องพอร์นลี่?</p>
               </div>
-              <h5 className="font-semibold text-xs mb-2">Expanded Access to Capital</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                You&apos;re not limited to a single pawn shop. Easily access with a wider network of Independent Investor right from your smartphone.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                คุณไม่ได้ถูกจำกัดแค่โรงรับจำนำเพียงที่เดียว เข้าถึงเครือข่ายนักลงทุนที่กว้างขึ้นจากสมาร์ทโฟนของคุณ
-              </p>
             </div>
 
-            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
-              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h5 className="font-semibold text-xs mb-2">Superior Loan Terms</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                Receive multiple loan offers from various investors, allowing you to choose the best terms, interest rates, and amounts.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                รับข้อเสนอสินเชื่อหลายรายการจากนักลงทุนหลายราย ให้คุณเลือกเงื่อนไขที่ดีที่สุด
-              </p>
+            <div className="text-center mb-4">
+              <h4 className="font-pawnly text-xl text-[#C4785C] mb-1">Pawners</h4>
+              <p className="text-[#C9A89B] text-xs">Get the Funds You Need, Fast & Fair</p>
             </div>
 
-            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
-              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
+            <div className="bg-[#F0CFC2] border border-[#DEB1A1] rounded-3xl px-6 py-6">
+              <div className="border-b border-[#DEB1A1] pb-5 mb-5">
+                <h5 className="font-pawnly text-lg text-[#C4785C]">Pawners</h5>
               </div>
-              <h5 className="font-semibold text-xs mb-2">Direct & Streamlined Funding</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                Potentially experience faster approvals and disbursement of funds since an investor selects your offer; online process streamlines funding.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                รับเงินเร็วขึ้นเมื่อนักลงทุนเลือกข้อเสนอของคุณ กระบวนการออนไลน์ช่วยให้การให้ทุนราบรื่นขึ้น
-              </p>
-            </div>
+              {/* Benefits Grid - 5 columns */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#C4785C] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#8B5A42] mb-2">Expanded Access to Capital</h5>
+                  <p className="text-[10px] text-[#8B5A42] leading-relaxed">
+                    You&apos;re not limited to a single pawn shop. Easily access with a wider network of Independent Investor right from your smartphone.
+                  </p>
+                  <p className="text-[10px] text-[#9B6E5B] mt-2 leading-relaxed">
+                    คุณไม่ได้ถูกจำกัดแค่โรงรับจำนำเพียงที่เดียว เข้าถึงเครือข่ายนักลงทุนที่กว้างขึ้นจากสมาร์ทโฟนของคุณ
+                  </p>
+                </div>
 
-            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
-              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                </svg>
-              </div>
-              <h5 className="font-semibold text-xs mb-2">Wider Acceptance</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                Items that might not be accepted at a traditional pawn shop or at a satisfactory rate; this a listing approach that widens the collateral acceptance.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                สิ่งของที่อาจไม่ได้รับการยอมรับในโรงรับจำนำ แพลตฟอร์มนี้ขยายการยอมรับหลักประกัน
-              </p>
-            </div>
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#C4785C] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#8B5A42] mb-2">Superior Loan Terms</h5>
+                  <p className="text-[10px] text-[#8B5A42] leading-relaxed">
+                    Receive multiple loan offers from various investors, allowing you to choose the best terms, interest rates, and amounts.
+                  </p>
+                  <p className="text-[10px] text-[#9B6E5B] mt-2 leading-relaxed">
+                    รับข้อเสนอสินเชื่อหลายรายการจากนักลงทุนหลายราย ให้คุณเลือกเงื่อนไขที่ดีที่สุด
+                  </p>
+                </div>
 
-            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
-              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
-                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                </svg>
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#C4785C] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#8B5A42] mb-2">Direct & Streamlined Funding</h5>
+                  <p className="text-[10px] text-[#8B5A42] leading-relaxed">
+                    Potentially experience faster approvals and disbursement of funds since an investor selects your offer; online process streamlines funding.
+                  </p>
+                  <p className="text-[10px] text-[#9B6E5B] mt-2 leading-relaxed">
+                    รับเงินเร็วขึ้นเมื่อนักลงทุนเลือกข้อเสนอของคุณ กระบวนการออนไลน์ช่วยให้การให้ทุนราบรื่นขึ้น
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#C4785C] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#8B5A42] mb-2">Wider Acceptance</h5>
+                  <p className="text-[10px] text-[#8B5A42] leading-relaxed">
+                    Items that might not be accepted at a traditional pawn shop or at a satisfactory rate; this a listing approach that widens the collateral acceptance.
+                  </p>
+                  <p className="text-[10px] text-[#9B6E5B] mt-2 leading-relaxed">
+                    สิ่งของที่อาจไม่ได้รับการยอมรับในโรงรับจำนำ แพลตฟอร์มนี้ขยายการยอมรับหลักประกัน
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#C4785C] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#8B5A42] mb-2">Increased Flexibility</h5>
+                  <p className="text-[10px] text-[#8B5A42] leading-relaxed">
+                    A larger pool of lenders offers choice and more opportunity for flexible loan structures tailored to individual preferences.
+                  </p>
+                  <p className="text-[10px] text-[#9B6E5B] mt-2 leading-relaxed">
+                    กลุ่มผู้ให้กู้ที่ใหญ่ขึ้นให้ทางเลือกและโอกาสมากขึ้นสำหรับโครงสร้างสินเชื่อที่ยืดหยุ่น
+                  </p>
+                </div>
               </div>
-              <h5 className="font-semibold text-xs mb-2">Increased Flexibility</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                A larger pool of lenders offers choice and more opportunity for flexible loan structures tailored to individual preferences.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                กลุ่มผู้ให้กู้ที่ใหญ่ขึ้นให้ทางเลือกและโอกาสมากขึ้นสำหรับโครงสร้างสินเชื่อที่ยืดหยุ่น
-              </p>
             </div>
           </div>
         </div>
       </section>
 
       {/* Investors Section */}
-      <section id="investors" className="py-20 bg-white">
+      <section id="investors" className="py-20 bg-[#F4F1F0]">
         <div className="container-custom">
-          <h2 className="font-pawnly text-3xl md:text-4xl text-center text-[#3B5998] mb-16">
-            Investors
-          </h2>
+          <div className="bg-[#F6F2F1] rounded-[28px] px-6 md:px-10 py-10 md:py-12">
+            <h2 className="font-pawnly text-3xl md:text-4xl text-center text-[#7A7A7A] mb-10">
+              Investors
+            </h2>
 
-          {/* What can Pawnly do for investor */}
-          <div className="grid lg:grid-cols-2 gap-8 items-start mb-16">
-            {/* Left - Image */}
-            <div>
-              <Image
-                src="/img6.png"
-                alt="What can Pawnly do for investor"
-                width={600}
-                height={450}
-                className="w-full h-auto"
-              />
+            {/* What can Pawnly do for investor */}
+            <div className="grid lg:grid-cols-2 gap-8 items-start mb-10">
+              {/* Left - Image */}
+              <div className="flex justify-center">
+                <Image
+                  src="/img6.png"
+                  alt="What can Pawnly do for investor"
+                  width={620}
+                  height={460}
+                  className="w-full max-w-xl h-auto"
+                />
+              </div>
+
+              {/* Right - Features */}
+              <div className="space-y-3">
+                <div className="bg-[#E8EEF7] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#C9D4EA]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#3B5998] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#3B5998]">List of pawners</span>
+                  </div>
+                  <span className="text-[#3B5998] text-xs bg-[#D5E0F2] px-3 py-1 rounded-full">รายชื่อผู้ขอสินเชื่อ</span>
+                </div>
+
+                <div className="bg-[#E8EEF7] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#C9D4EA]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#3B5998] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#3B5998]">Evaluation system</span>
+                  </div>
+                  <span className="text-[#3B5998] text-xs bg-[#D5E0F2] px-3 py-1 rounded-full">ระบบประเมิน</span>
+                </div>
+
+                <div className="bg-[#E8EEF7] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#C9D4EA]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#3B5998] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#3B5998]">Asset storage</span>
+                  </div>
+                  <span className="text-[#3B5998] text-xs bg-[#D5E0F2] px-3 py-1 rounded-full">การจัดเก็บสินทรัพย์</span>
+                </div>
+
+                <div className="bg-[#E8EEF7] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#C9D4EA]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#3B5998] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#3B5998]">Status tracking</span>
+                  </div>
+                  <span className="text-[#3B5998] text-xs bg-[#D5E0F2] px-3 py-1 rounded-full">การติดตามสถานะสัญญา</span>
+                </div>
+
+                <div className="bg-[#E8EEF7] rounded-2xl py-3 px-5 flex items-center justify-between border border-[#C9D4EA]">
+                  <div className="flex items-center gap-3">
+                    <span className="w-5 h-5 bg-[#3B5998] rounded-full flex items-center justify-center">
+                      <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                      </svg>
+                    </span>
+                    <span className="text-sm font-medium text-[#3B5998]">Contract management</span>
+                  </div>
+                  <span className="text-[#3B5998] text-xs bg-[#D5E0F2] px-3 py-1 rounded-full">จัดการสัญญา</span>
+                </div>
+              </div>
             </div>
 
-            {/* Right - Features */}
-            <div className="space-y-3">
-              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">List of pawners</span>
-                </div>
-                <span className="text-gray-400 text-xs">รายชื่อผู้ขอสินเชื่อ</span>
-              </div>
-
-              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">Evaluation system</span>
-                </div>
-                <span className="text-gray-400 text-xs">ระบบประเมิน</span>
-              </div>
-
-              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">Asset storage</span>
-                </div>
-                <span className="text-gray-400 text-xs">การจัดเก็บสินทรัพย์</span>
-              </div>
-
-              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">Status tracking</span>
-                </div>
-                <span className="text-gray-400 text-xs">ติดตามสถานะ</span>
-              </div>
-
-              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
-                <div className="flex items-center gap-3">
-                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
-                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </span>
-                  <span className="text-sm font-medium">Contract management</span>
-                </div>
-                <span className="text-gray-400 text-xs">จัดการสัญญา</span>
+            {/* Benefits */}
+            <div className="text-center mb-6">
+              <div className="bg-[#BCC9DF] rounded-full py-4 px-6 max-w-3xl mx-auto">
+                <h3 className="font-display text-2xl md:text-3xl text-[#203E75]">Benefits</h3>
+                <p className="text-[#4D6BA2] text-sm">ทำไมต้องพอร์นลี่?</p>
               </div>
             </div>
-          </div>
 
-          {/* Benefits */}
-          <div className="text-center mb-8">
-            <h3 className="font-display text-2xl md:text-3xl text-gray-800 mb-2">Benefits</h3>
-            <p className="text-[#3B5998] text-sm">ประโยชน์สำหรับนักลงทุน</p>
-          </div>
-
-          <div className="text-center mb-8">
-            <h4 className="font-pawnly text-xl text-[#3B5998] mb-2">Investors</h4>
-            <p className="text-gray-500 text-sm">Unlock Opportunities & Transparent Returns</p>
-          </div>
-
-          {/* Benefits Grid - 4 columns */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-            <div className="bg-[#F0F4FF] rounded-xl p-5 card-hover">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
-                <svg className="w-5 h-5 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              </div>
-              <h5 className="font-semibold text-xs mb-2">Asset-Backed Security</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                Your investments are secured by tangible, verified assets held in professional storage.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                การลงทุนของคุณได้รับการค้ำประกันด้วยสินทรัพย์ที่จับต้องได้และได้รับการตรวจสอบแล้ว
-              </p>
+            <div className="text-center mb-4">
+              <h4 className="font-pawnly text-xl text-[#203E75] mb-1">Investors</h4>
+              <p className="text-[#6C84AE] text-xs">Secure Opportunities & Transparent Returns</p>
             </div>
 
-            <div className="bg-[#F0F4FF] rounded-xl p-5 card-hover">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
-                <svg className="w-5 h-5 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
-                </svg>
+            <div className="bg-[#BCC9DF] border border-[#2A4B87] rounded-3xl px-6 py-6">
+              <div className="border-b border-[#2A4B87] pb-5 mb-5">
+                <h5 className="font-pawnly text-lg text-[#203E75]">Investors</h5>
               </div>
-              <h5 className="font-semibold text-xs mb-2">Diversify Your Portfolio</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                Add a new layer of stability and opportunity to your investment portfolio with short term loans.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                เพิ่มความมั่นคงและโอกาสใหม่ให้กับพอร์ตการลงทุนของคุณด้วยสินเชื่อระยะสั้น
-              </p>
-            </div>
+              {/* Benefits Grid - 5 columns */}
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-5">
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#203E75] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#203E75] mb-2">Asset-Backed Security</h5>
+                  <p className="text-[10px] text-[#203E75] leading-relaxed">
+                    Your investments are secured by tangible, verified assets held in professional storage.
+                  </p>
+                  <p className="text-[10px] text-[#375388] mt-2 leading-relaxed">
+                    การลงทุนของคุณได้รับการค้ำประกันด้วยสินทรัพย์ที่จับต้องได้และได้รับการตรวจสอบแล้ว
+                  </p>
+                </div>
 
-            <div className="bg-[#F0F4FF] rounded-xl p-5 card-hover">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
-                <svg className="w-5 h-5 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                </svg>
-              </div>
-              <h5 className="font-semibold text-xs mb-2">Direct & Transparent Access</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                Browse items posted by pawners, view detailed information, directly to fund loans that meet your criteria.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                เรียกดูรายการที่โพสต์โดยผู้ขอสินเชื่อ ดูข้อมูลรายละเอียด เพื่อให้ทุนสินเชื่อที่ตรงตามเกณฑ์ของคุณ
-              </p>
-            </div>
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#203E75] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#203E75] mb-2">More Competitive Offers</h5>
+                  <p className="text-[10px] text-[#203E75] leading-relaxed">
+                    Discover a unique alternative investment class offering attractive interest rates and steady returns.
+                  </p>
+                  <p className="text-[10px] text-[#375388] mt-2 leading-relaxed">
+                    ค้นพบทางเลือกการลงทุนที่ให้ผลตอบแทนน่าสนใจและสม่ำเสมอ
+                  </p>
+                </div>
 
-            <div className="bg-[#F0F4FF] rounded-xl p-5 card-hover">
-              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
-                <svg className="w-5 h-5 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
-                </svg>
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#203E75] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#203E75] mb-2">Diversify Your Portfolio</h5>
+                  <p className="text-[10px] text-[#203E75] leading-relaxed">
+                    Add a new layer of stability and opportunity to your investment portfolio with secured short-term loans.
+                  </p>
+                  <p className="text-[10px] text-[#375388] mt-2 leading-relaxed">
+                    เพิ่มความมั่นคงและโอกาสใหม่ให้กับพอร์ตการลงทุนของคุณด้วยสินเชื่อระยะสั้น
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#203E75] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#203E75] mb-2">Direct & Transparent Access</h5>
+                  <p className="text-[10px] text-[#203E75] leading-relaxed">
+                    Browse items posted by pawners, view detailed appraisals, and engage directly to fund loans that meet your criteria.
+                  </p>
+                  <p className="text-[10px] text-[#375388] mt-2 leading-relaxed">
+                    เรียกดูรายการที่โพสต์โดยผู้ขอสินเชื่อ ดูข้อมูลรายละเอียด และให้ทุนสินเชื่อที่ตรงตามเกณฑ์ของคุณ
+                  </p>
+                </div>
+
+                <div className="text-center">
+                  <div className="w-10 h-10 bg-[#203E75] rounded-full flex items-center justify-center mb-3 mx-auto">
+                    <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <h5 className="font-semibold text-xs text-[#203E75] mb-2">Manage Your Portfolio</h5>
+                  <p className="text-[10px] text-[#203E75] leading-relaxed">
+                    Utilize an intuitive dashboard to track your investments, disbursed funds, and monitor your returns with ease.
+                  </p>
+                  <p className="text-[10px] text-[#375388] mt-2 leading-relaxed">
+                    ใช้แดชบอร์ดที่ใช้งานง่ายเพื่อติดตามการลงทุนของคุณ ตรวจสอบผลตอบแทนได้อย่างง่ายดาย
+                  </p>
+                </div>
               </div>
-              <h5 className="font-semibold text-xs mb-2">Manage Your Portfolio</h5>
-              <p className="text-[10px] text-gray-500 leading-relaxed">
-                Utilize an intuitive dashboard to track your investments, monitor your returns with ease.
-              </p>
-              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
-                ใช้แดชบอร์ดที่ใช้งานง่ายเพื่อติดตามการลงทุนของคุณ ตรวจสอบผลตอบแทนได้อย่างง่ายดาย
-              </p>
             </div>
           </div>
         </div>
