@@ -85,9 +85,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Phone Mockups Section */}
-      <section className="py-16 bg-[#F8F9FA]">
-        <div className="container-custom">
+      {/* Phone Mockups Section with curved background */}
+      <section className="relative py-16 overflow-hidden">
+        {/* Curved background shape */}
+        <div className="absolute inset-0 overflow-hidden">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[140%] h-full bg-[#E8C4B8] rounded-[50%] transform -translate-y-1/4"></div>
+        </div>
+
+        <div className="container-custom relative z-10">
           <div className="flex justify-center animate-fade-in-up">
             <div className="relative w-full max-w-3xl">
               <Image
@@ -99,13 +104,9 @@ export default function Home() {
               />
             </div>
           </div>
-        </div>
-      </section>
 
-      {/* What is Pawnly Section */}
-      <section className="py-20">
-        <div className="container-custom">
-          <div className="text-center max-w-3xl mx-auto animate-fade-in-up">
+          {/* What is Pawnly Section - inside curved area */}
+          <div className="text-center max-w-3xl mx-auto mt-12 animate-fade-in-up">
             <h2 className="font-display text-3xl md:text-4xl text-gray-800 mb-2">
               What is <span className="font-pawnly text-[#C4785C]">Pawnly</span>?
             </h2>
@@ -125,7 +126,7 @@ export default function Home() {
       </section>
 
       {/* Who You Are Section */}
-      <section className="py-16">
+      <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="text-center mb-12">
             <h2 className="font-display text-3xl md:text-4xl text-gray-800 mb-2">
@@ -137,7 +138,7 @@ export default function Home() {
 
           <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
             {/* Pawner Card */}
-            <a href="#pawners" className="block card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <a href="#pawners" className="block card-hover bg-[#FDF8F6] rounded-2xl overflow-hidden">
               <div className="p-6">
                 <Image
                   src="/img3.png"
@@ -150,7 +151,7 @@ export default function Home() {
             </a>
 
             {/* Investor Card */}
-            <a href="#investors" className="block card-hover bg-white rounded-2xl overflow-hidden shadow-lg border border-gray-100">
+            <a href="#investors" className="block card-hover bg-[#FDF8F6] rounded-2xl overflow-hidden">
               <div className="p-6">
                 <Image
                   src="/img4.png"
@@ -173,9 +174,9 @@ export default function Home() {
           </h2>
 
           {/* What can Pawnly do for pawner */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 items-start mb-16">
             {/* Left - Image */}
-            <div className="order-2 lg:order-1">
+            <div>
               <Image
                 src="/img5.png"
                 alt="What can Pawnly do for pawner"
@@ -186,39 +187,71 @@ export default function Home() {
             </div>
 
             {/* Right - Features */}
-            <div className="order-1 lg:order-2">
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="feature-tag">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" readOnly />
-                  Digital Item Listing
-                  <span className="text-gray-400 text-xs ml-2">เพิ่มรายการ</span>
-                </span>
-                <span className="feature-tag">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" readOnly />
-                  AI Appraisal Tool
-                  <span className="text-gray-400 text-xs ml-2">ประเมินมูลค่าด้วย AI</span>
-                </span>
-                <span className="feature-tag">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" readOnly />
-                  Loan Status Tracking
-                  <span className="text-gray-400 text-xs ml-2">ติดตามสถานะสัญญา</span>
-                </span>
-                <span className="feature-tag">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" readOnly />
-                  Secure Messaging
-                  <span className="text-gray-400 text-xs ml-2">แชทกับทีมงาน</span>
-                </span>
-                <span className="feature-tag">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" readOnly />
-                  Digital Loan Agreements
-                  <span className="text-gray-400 text-xs ml-2">สัญญาดิจิทัล</span>
-                </span>
+            <div className="space-y-3">
+              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">Digital Item Listing</span>
+                </div>
+                <span className="text-gray-400 text-xs">เพิ่มรายการสินค้า</span>
+              </div>
+
+              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">AI Appraisal Tool</span>
+                </div>
+                <span className="text-gray-400 text-xs">ประเมินมูลค่าด้วย AI</span>
+              </div>
+
+              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">Loan Status Tracking</span>
+                </div>
+                <span className="text-gray-400 text-xs">ติดตามสถานะสัญญา</span>
+              </div>
+
+              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">Secure Messaging</span>
+                </div>
+                <span className="text-gray-400 text-xs">แชทกับทีมงาน</span>
+              </div>
+
+              <div className="bg-white rounded-full py-3 px-6 flex items-center justify-between shadow-sm">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#C4785C] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">Digital Loan Agreements</span>
+                </div>
+                <span className="text-gray-400 text-xs">สัญญาดิจิทัล</span>
               </div>
             </div>
           </div>
 
           {/* Benefits */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h3 className="font-display text-2xl md:text-3xl text-gray-800 mb-2">Benefits</h3>
             <p className="text-[#C4785C] text-sm">ประโยชน์สำหรับผู้ขอสินเชื่อ</p>
           </div>
@@ -228,79 +261,79 @@ export default function Home() {
             <p className="text-gray-500 text-sm">Benefits for Pawn Holders/Borrowers</p>
           </div>
 
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-3 lg:grid-cols-5 gap-6">
-            <div className="bg-white rounded-xl p-6 text-center card-hover shadow-sm">
-              <div className="w-12 h-12 bg-[#FFF5F2] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* Benefits Grid - 5 columns */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
+            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
+              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
                 </svg>
               </div>
-              <h5 className="font-semibold text-sm mb-2">Expanded Access to Capital</h5>
-              <p className="text-xs text-gray-500">
+              <h5 className="font-semibold text-xs mb-2">Expanded Access to Capital</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
                 You&apos;re not limited to a single pawn shop. Easily access with a wider network of Independent Investor right from your smartphone.
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
                 คุณไม่ได้ถูกจำกัดแค่โรงรับจำนำเพียงที่เดียว เข้าถึงเครือข่ายนักลงทุนที่กว้างขึ้นจากสมาร์ทโฟนของคุณ
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 text-center card-hover shadow-sm">
-              <div className="w-12 h-12 bg-[#FFF5F2] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
+              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h5 className="font-semibold text-sm mb-2">Superior Loan Terms</h5>
-              <p className="text-xs text-gray-500">
+              <h5 className="font-semibold text-xs mb-2">Superior Loan Terms</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
                 Receive multiple loan offers from various investors, allowing you to choose the best terms, interest rates, and amounts.
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
                 รับข้อเสนอสินเชื่อหลายรายการจากนักลงทุนหลายราย ให้คุณเลือกเงื่อนไขที่ดีที่สุด
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 text-center card-hover shadow-sm">
-              <div className="w-12 h-12 bg-[#FFF5F2] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
+              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
               </div>
-              <h5 className="font-semibold text-sm mb-2">Direct & Streamlined Funding</h5>
-              <p className="text-xs text-gray-500">
+              <h5 className="font-semibold text-xs mb-2">Direct & Streamlined Funding</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
                 Potentially experience faster approvals and disbursement of funds since an investor selects your offer; online process streamlines funding.
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
                 รับเงินเร็วขึ้นเมื่อนักลงทุนเลือกข้อเสนอของคุณ กระบวนการออนไลน์ช่วยให้การให้ทุนราบรื่นขึ้น
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 text-center card-hover shadow-sm">
-              <div className="w-12 h-12 bg-[#FFF5F2] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
+              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h5 className="font-semibold text-sm mb-2">Wider Acceptance</h5>
-              <p className="text-xs text-gray-500">
+              <h5 className="font-semibold text-xs mb-2">Wider Acceptance</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
                 Items that might not be accepted at a traditional pawn shop or at a satisfactory rate; this a listing approach that widens the collateral acceptance.
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
                 สิ่งของที่อาจไม่ได้รับการยอมรับในโรงรับจำนำ แพลตฟอร์มนี้ขยายการยอมรับหลักประกัน
               </p>
             </div>
 
-            <div className="bg-white rounded-xl p-6 text-center card-hover shadow-sm">
-              <div className="w-12 h-12 bg-[#FFF5F2] rounded-full flex items-center justify-center mx-auto mb-4">
-                <svg className="w-6 h-6 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-white rounded-xl p-5 card-hover shadow-sm">
+              <div className="w-10 h-10 bg-[#FFF5F2] rounded-full flex items-center justify-center mb-4">
+                <svg className="w-5 h-5 text-[#C4785C]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                 </svg>
               </div>
-              <h5 className="font-semibold text-sm mb-2">Increased Flexibility</h5>
-              <p className="text-xs text-gray-500">
+              <h5 className="font-semibold text-xs mb-2">Increased Flexibility</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
                 A larger pool of lenders offers choice and more opportunity for flexible loan structures tailored to individual preferences.
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
                 กลุ่มผู้ให้กู้ที่ใหญ่ขึ้นให้ทางเลือกและโอกาสมากขึ้นสำหรับโครงสร้างสินเชื่อที่ยืดหยุ่น
               </p>
             </div>
@@ -316,7 +349,7 @@ export default function Home() {
           </h2>
 
           {/* What can Pawnly do for investor */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          <div className="grid lg:grid-cols-2 gap-8 items-start mb-16">
             {/* Left - Image */}
             <div>
               <Image
@@ -329,39 +362,71 @@ export default function Home() {
             </div>
 
             {/* Right - Features */}
-            <div>
-              <div className="flex flex-wrap gap-3 mb-6">
-                <span className="feature-tag feature-tag-blue">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" style={{ borderColor: '#3B5998' }} readOnly />
-                  List of pawners
-                  <span className="text-gray-400 text-xs ml-2">รายชื่อผู้ขอสินเชื่อ</span>
-                </span>
-                <span className="feature-tag feature-tag-blue">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" style={{ borderColor: '#3B5998' }} readOnly />
-                  Evaluation system
-                  <span className="text-gray-400 text-xs ml-2">ระบบประเมิน</span>
-                </span>
-                <span className="feature-tag feature-tag-blue">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" style={{ borderColor: '#3B5998' }} readOnly />
-                  Asset storage
-                  <span className="text-gray-400 text-xs ml-2">การจัดเก็บสินทรัพย์</span>
-                </span>
-                <span className="feature-tag feature-tag-blue">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" style={{ borderColor: '#3B5998' }} readOnly />
-                  Status tracking
-                  <span className="text-gray-400 text-xs ml-2">ติดตามสถานะ</span>
-                </span>
-                <span className="feature-tag feature-tag-blue">
-                  <input type="checkbox" defaultChecked className="checkbox-orange mr-2" style={{ borderColor: '#3B5998' }} readOnly />
-                  Contract management
-                  <span className="text-gray-400 text-xs ml-2">จัดการสัญญา</span>
-                </span>
+            <div className="space-y-3">
+              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">List of pawners</span>
+                </div>
+                <span className="text-gray-400 text-xs">รายชื่อผู้ขอสินเชื่อ</span>
+              </div>
+
+              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">Evaluation system</span>
+                </div>
+                <span className="text-gray-400 text-xs">ระบบประเมิน</span>
+              </div>
+
+              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">Asset storage</span>
+                </div>
+                <span className="text-gray-400 text-xs">การจัดเก็บสินทรัพย์</span>
+              </div>
+
+              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">Status tracking</span>
+                </div>
+                <span className="text-gray-400 text-xs">ติดตามสถานะ</span>
+              </div>
+
+              <div className="bg-[#F0F4FF] rounded-full py-3 px-6 flex items-center justify-between">
+                <div className="flex items-center gap-3">
+                  <span className="w-5 h-5 bg-[#3B5998] rounded flex items-center justify-center">
+                    <svg className="w-3 h-3 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </span>
+                  <span className="text-sm font-medium">Contract management</span>
+                </div>
+                <span className="text-gray-400 text-xs">จัดการสัญญา</span>
               </div>
             </div>
           </div>
 
           {/* Benefits */}
-          <div className="text-center mb-12">
+          <div className="text-center mb-8">
             <h3 className="font-display text-2xl md:text-3xl text-gray-800 mb-2">Benefits</h3>
             <p className="text-[#3B5998] text-sm">ประโยชน์สำหรับนักลงทุน</p>
           </div>
@@ -371,67 +436,67 @@ export default function Home() {
             <p className="text-gray-500 text-sm">Unlock Opportunities & Transparent Returns</p>
           </div>
 
-          {/* Benefits Grid */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="bg-[#F5F8FC] rounded-xl p-6 text-center card-hover">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <svg className="w-6 h-6 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          {/* Benefits Grid - 4 columns */}
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+            <div className="bg-[#F0F4FF] rounded-xl p-5 card-hover">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+                <svg className="w-5 h-5 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
                 </svg>
               </div>
-              <h5 className="font-semibold text-sm mb-2">Asset-Backed Security</h5>
-              <p className="text-xs text-gray-500">
+              <h5 className="font-semibold text-xs mb-2">Asset-Backed Security</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
                 Your investments are secured by tangible, verified assets held in professional storage.
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
                 การลงทุนของคุณได้รับการค้ำประกันด้วยสินทรัพย์ที่จับต้องได้และได้รับการตรวจสอบแล้ว
               </p>
             </div>
 
-            <div className="bg-[#F5F8FC] rounded-xl p-6 text-center card-hover">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <svg className="w-6 h-6 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6" />
-                </svg>
-              </div>
-              <h5 className="font-semibold text-sm mb-2">More Competitive Offers</h5>
-              <p className="text-xs text-gray-500">
-                Discover a unique alternative investment class offering steady returns.
-              </p>
-              <p className="text-xs text-gray-400 mt-2">
-                ค้นพบการลงทุนทางเลือกที่ไม่เหมือนใครที่ให้ผลตอบแทนที่มั่นคง
-              </p>
-            </div>
-
-            <div className="bg-[#F5F8FC] rounded-xl p-6 text-center card-hover">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <svg className="w-6 h-6 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-[#F0F4FF] rounded-xl p-5 card-hover">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+                <svg className="w-5 h-5 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M11 3.055A9.001 9.001 0 1020.945 13H11V3.055z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M20.488 9H15V3.512A9.025 9.025 0 0120.488 9z" />
                 </svg>
               </div>
-              <h5 className="font-semibold text-sm mb-2">Diversify Your Portfolio</h5>
-              <p className="text-xs text-gray-500">
+              <h5 className="font-semibold text-xs mb-2">Diversify Your Portfolio</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
                 Add a new layer of stability and opportunity to your investment portfolio with short term loans.
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
                 เพิ่มความมั่นคงและโอกาสใหม่ให้กับพอร์ตการลงทุนของคุณด้วยสินเชื่อระยะสั้น
               </p>
             </div>
 
-            <div className="bg-[#F5F8FC] rounded-xl p-6 text-center card-hover">
-              <div className="w-12 h-12 bg-white rounded-full flex items-center justify-center mx-auto mb-4 shadow-sm">
-                <svg className="w-6 h-6 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div className="bg-[#F0F4FF] rounded-xl p-5 card-hover">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+                <svg className="w-5 h-5 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
                 </svg>
               </div>
-              <h5 className="font-semibold text-sm mb-2">Direct & Transparent Access</h5>
-              <p className="text-xs text-gray-500">
+              <h5 className="font-semibold text-xs mb-2">Direct & Transparent Access</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
                 Browse items posted by pawners, view detailed information, directly to fund loans that meet your criteria.
               </p>
-              <p className="text-xs text-gray-400 mt-2">
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
                 เรียกดูรายการที่โพสต์โดยผู้ขอสินเชื่อ ดูข้อมูลรายละเอียด เพื่อให้ทุนสินเชื่อที่ตรงตามเกณฑ์ของคุณ
+              </p>
+            </div>
+
+            <div className="bg-[#F0F4FF] rounded-xl p-5 card-hover">
+              <div className="w-10 h-10 bg-white rounded-full flex items-center justify-center mb-4 shadow-sm">
+                <svg className="w-5 h-5 text-[#3B5998]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+                </svg>
+              </div>
+              <h5 className="font-semibold text-xs mb-2">Manage Your Portfolio</h5>
+              <p className="text-[10px] text-gray-500 leading-relaxed">
+                Utilize an intuitive dashboard to track your investments, monitor your returns with ease.
+              </p>
+              <p className="text-[10px] text-gray-400 mt-2 leading-relaxed">
+                ใช้แดชบอร์ดที่ใช้งานง่ายเพื่อติดตามการลงทุนของคุณ ตรวจสอบผลตอบแทนได้อย่างง่ายดาย
               </p>
             </div>
           </div>
