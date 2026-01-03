@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Sarabun } from "@next/font/google";
+import { Sarabun } from "next/font/google";
 import "./globals.css";
 
 const sarabun = Sarabun({
